@@ -8,6 +8,12 @@ pipeline {
                 url: 'https://github.com/Nareshvj04/jenkins-test.git'
             }
         }
+        stage('Run Python Script') {
+            steps {
+                // This executes the python file you just cloned
+                sh 'python3 sample.py' 
+            }
+        }
 
         stage('Build') {
             steps {
